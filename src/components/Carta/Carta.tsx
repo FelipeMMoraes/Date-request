@@ -8,6 +8,9 @@ import {
   PopupContainer,
 } from "./carta.styles";
 
+import ring from "../../../public/images/anel.jpg";
+import card from "../../../public/images/carta.png";
+
 interface CartaProps {
   onButtonClick: () => void;
 }
@@ -45,7 +48,7 @@ const Carta: React.FC<CartaProps> = ({ onButtonClick }) => {
   return (
     <CartaContainer>
       <ImagemCarta
-        src="../../../public/images/carta.png"
+        src={card}
         alt="Carta de namoro"
         onClick={handleImagemClick}
       />
@@ -60,10 +63,7 @@ const Carta: React.FC<CartaProps> = ({ onButtonClick }) => {
           {namorando && (
             <div>
               <ImagemAdicionalContainer>
-                <img
-                  src="../../../public/images/anel.jpg"
-                  alt="Imagem adicional"
-                />
+                <img src={ring} alt="Imagem adicional" />
               </ImagemAdicionalContainer>
             </div>
           )}
