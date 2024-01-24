@@ -1,4 +1,3 @@
-// Carta.tsx
 import React, { useState } from "react";
 import {
   BotaoPopup,
@@ -10,28 +9,27 @@ import {
 } from "./carta.styles";
 
 interface CartaProps {
-  onImageClick: () => void;
+  onButtonClick: () => void;
 }
 
-const Carta: React.FC<CartaProps> = ({ onImageClick }) => {
+const Carta: React.FC<CartaProps> = ({ onButtonClick }) => {
   const [mostrarPopup, setMostrarPopup] = useState(false);
   const [popupPosition, setPopupPosition] = useState({
     top: "50%",
     left: "50%",
   });
-  const [popupContent, setPopupContent] = useState(
-    "Aceita namorar comigo oficialmente?"
-  );
+  const [popupContent, setPopupContent] = useState("Aceita namorar comigo?");
   const [namorando, setNamorando] = useState(false);
 
   const handleImagemClick = () => {
     setMostrarPopup(true);
-    onImageClick();
+    onButtonClick();
   };
 
-  const handlePopupButtonClick = (resposta: boolean) => {
+  const handlePopupButtonClick = () => {
     setPopupContent("Agora estamos namorando oficialmente!");
     setNamorando(true);
+    // Mantenha o popup aberto após clicar no botão "Sim"
   };
 
   const handleNaoHover = () => {
@@ -74,7 +72,7 @@ const Carta: React.FC<CartaProps> = ({ onImageClick }) => {
               <BotaoPopup
                 onClick={() => {
                   centralizarPopup();
-                  handlePopupButtonClick(true);
+                  handlePopupButtonClick();
                 }}
               >
                 Sim
@@ -83,7 +81,7 @@ const Carta: React.FC<CartaProps> = ({ onImageClick }) => {
                 onMouseOver={handleNaoHover}
                 onClick={() => {
                   centralizarPopup();
-                  handlePopupButtonClick(false);
+                  handlePopupButtonClick();
                 }}
               >
                 Não

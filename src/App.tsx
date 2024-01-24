@@ -1,4 +1,5 @@
-import React from "react";
+// App.tsx
+import React, { useState } from "react";
 import styled from "styled-components";
 import Carta from "./components/Carta/Carta";
 
@@ -14,7 +15,15 @@ const AppContainer = styled.div`
 `;
 
 const App: React.FC = () => {
-  const handleButtonClick = () => {};
+  const [namorando, setNamorando] = useState(false);
+
+  const handleButtonClick = () => {
+    // Implemente a lógica necessária para o pedido de namoro
+    if (!namorando) {
+      console.log('Botão "Sim" clicado. Pedido de namoro aceito!');
+      setNamorando(true);
+    }
+  };
 
   return (
     <AppContainer>
