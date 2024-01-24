@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 export const CartaContainer = styled.div`
   position: relative;
-  width: 500px; /* ou o tamanho desejado */
-  height: auto; /* Altura automática para manter a proporção da imagem */
-  margin: 0 auto; /* Centraliza a carta na tela horizontalmente */
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
 `;
 
 export const ImagemCarta = styled.img`
@@ -18,8 +18,9 @@ export const PopupContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  min-width: 300px;
   transform: translate(-50%, -50%);
-  background: #ff66b2; /* Rosa mais forte */
+  background: #ff66b2;
   padding: 20px;
   text-align: center;
   border-radius: 10px;

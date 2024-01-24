@@ -10,7 +10,7 @@ const AppContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/public/images/bg.jpg");
+  background-image: url("/images/bg.jpg");
   background-size: cover;
 `;
 
