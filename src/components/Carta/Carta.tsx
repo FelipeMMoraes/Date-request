@@ -8,8 +8,8 @@ import {
   PopupContainer,
 } from "./carta.styles";
 
-import ring from "../../../public/images/anel.jpg";
 import card from "../../../public/images/carta.png";
+import ring from "../../../public/images/we.jpg";
 
 interface CartaProps {
   onButtonClick: () => void;
@@ -32,7 +32,6 @@ const Carta: React.FC<CartaProps> = ({ onButtonClick }) => {
   const handlePopupButtonClick = () => {
     setPopupContent("Agora estamos namorando oficialmente!");
     setNamorando(true);
-    // Mantenha o popup aberto após clicar no botão "Sim"
   };
 
   const handleNaoHover = () => {

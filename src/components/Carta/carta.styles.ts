@@ -48,4 +48,8 @@ export const BotaoPopup = styled.button`
 
 export const ImagemAdicionalContainer = styled.div`
   margin-top: 20px;
+
+  img {
+    max-width: 300px;
+  }
 `;
